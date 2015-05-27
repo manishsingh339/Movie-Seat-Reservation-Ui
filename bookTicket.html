@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<style type="text/css">
+			.main{
+				border-style: solid;
+			}
+			.confirm-container,.steatMap-container,.input-container{
+				  margin-left: 25%;
+  				padding: 10px 0 10px 0;
+			}
+
+			#confirm-btn,#start-select-btn{
+				height: 24px;
+				width: auto;
+				margin: 10px 5%;
+  			}
+
+			table, td, th {
+    			border: 1px solid green;
+			}
+			.pointer{	
+    			cursor:pointer;
+			}
+			.selected{
+				background-color: green;
+			}
+			.booked{
+				background-color: red;
+			}
+			
+			.screen-position{
+				    margin-left: 30%;
+			}
+
+			table#confirm-view th {
+				border-width: 1px;
+				padding: 8px;
+				border-style: solid;
+				border-color: #666666;
+				background-color: #dedede;
+			}
+			table#confirm-view td {
+				border-width: 1px;
+				padding: 8px;
+				border-style: solid;
+				border-color: #666666;
+				background-color: #ffffff;
+			}
+			.setWidth{
+				width: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Movie Seat Reservation</h2>
+		<div class="main" id="mainDiv">
+			<div class="input-container">
+				<label for="name">Name:</label>
+				<input type="text" name="user" placeholder="Enter your name" value="" 
+				id="userName">
+				<label for="name">Nob of seats:</label>				
+				<input type="text" name="user" placeholder="Enter number of seats" 
+				value="" id="nobOfTickets">
+				<br>
+				<button id="start-select-btn">Start Selecting</button>
+			</div>
+
+			<div class="steatMap-container">
+				<div class="screen-position"><b>SCREEN</b></div>
+				<div id="table-container"> </div>
+				<div class="instruct">
+					<table cellspacing="10" >
+						<tr> <td class="selected setWidth"></td>
+							  <td>Selected Seats</td>
+						</tr>
+						<tr>  <td class="booked setWidth"></td>
+							  <td>Booked Seats</td>
+						</tr>
+						<tr> <td class="setWidth"></td><td>Empty Seats</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="confirm-container">
+				<button id="confirm-btn">Confirm Selection</button>
+				<div>
+					<div><b>Reservation List</b></div>
+					<table id="confirm-view">
+						<tr>
+							<th>Name</th><th>Number of seats</th><th>Seat details</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+		</div>
+	</body>
+		<script type="text/javascript" src="js/libs/jquery.1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/bookTicket.js"></script>
+</html>
